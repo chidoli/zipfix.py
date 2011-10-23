@@ -367,7 +367,6 @@ def enumArchive(f, mode):
             print f_pos
             z = 0
 zipname = ''
-zipname = '/Users/Chidoli/Pictures/backup/iPhotoLibrary.zip'
 print '\n\n\n'
 if zipname != '':
     print 'start recovery for', zipname
