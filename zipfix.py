@@ -353,14 +353,18 @@ def enumArchive(f, mode):
                             print 'not found'
                             return
 
-            f_pos += 4 + fh.len
+            # f_pos += 4 + fh.len
             '''
             n += 1
             if n==3:
                 return
             '''
+        ''' just to make sure
         else:
             f_pos += 1
+        '''
+        
+        f_pos += 1
 
         z += 1
         if z == 1000000:
