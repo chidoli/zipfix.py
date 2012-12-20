@@ -1,5 +1,6 @@
 import math
 import os
+import sys
 
 methods = {}
 for i in xrange(20):
@@ -352,31 +353,18 @@ def enumArchive(f, mode):
                         if loc_pos > size:
                             print 'not found'
                             return
-
-            # f_pos += 4 + fh.len
-            '''
-            n += 1
-            if n==3:
-                return
-            '''
-        ''' just to make sure
-        else:
-            f_pos += 1
-        '''
-        
         f_pos += 1
 
         z += 1
         if z == 1000000:
             print f_pos
             z = 0
-zipname = ''
-print '\n\n\n'
-if zipname != '':
+
+if len(sys.argv) > 1:
+    zipname = sys.argv[1]
     print 'start recovery for', zipname
 else:
-    print 'modify script for zipname'
+    print 'file name not provided. (python zipfix.py filename)'
 
 f = open(zipname)
 enumArchive(f, 0)
-#print methods
